@@ -1,0 +1,1921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>addstudent</class>
+ <widget class="QDialog" name="addstudent">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Calibri</family>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>IBeamCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_titel">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>329</y>
+     <width>350</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Reem Kufi</family>
+     <pointsize>16</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(26, 76, 255);
+font: 16pt &quot;Reem Kufi&quot;;
+color: rgb(255, 255, 0);
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="text">
+    <string>برنامج معلومات الطلاب - اضافة طالب جديد</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblfname">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>442</y>
+     <width>350</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>هنا تظهر نتيحة حفظ بيانات الطالب</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtname">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>8</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>8</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>الاسم الرباعي</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtsname">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>40</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string extracomment="اكتب الاسم الرباعي للطالب"/>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_2">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>40</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>اللقب</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ptn_savenewstudent">
+   <property name="geometry">
+    <rect>
+     <x>182</x>
+     <y>400</y>
+     <width>170</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 170, 0);</string>
+   </property>
+   <property name="text">
+    <string>حفظ معلومات الطالب</string>
+   </property>
+   <property name="icon">
+    <iconset theme="insert-text">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtEnname">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>106</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblgender">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>139</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>الجنس</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_en">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>106</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>الاسم بالانكليزي</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblmother">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>201</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>اسم الام</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtmothername">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>201</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblbirthdate">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>170</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>تاريخ الميلاد</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_7">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>265</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>رقم هوية الاحوال</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtidno">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>265</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblbloodtype">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>234</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>فصيلة الدم</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_9">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>8</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>سنة التسجيل بالمعهد</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_10">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>74</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>الاعدادية او مهني</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtphone">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>298</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_11">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>8</y>
+     <width>120</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>دور التخرج</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_12">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>371</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>هل مستمر ام لا</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_13">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>239</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>المرحلة</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtparantsphone">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>331</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtenrolyear">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>8</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_14">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>41</y>
+     <width>120</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>سنة التخرج</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtprepschool">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>74</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_15">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>331</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>رقم هاتف ولي الامر</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtgraduationyear">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>41</y>
+     <width>170</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_16">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>298</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>رقم الهاتف</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_17">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>74</y>
+     <width>120</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>التدريب الصيفي</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_18">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>73</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>الاسم الكامل او المختلف</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_19">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>364</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>الايميل</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_20">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>404</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;حالة الطالب هل هو مستمر، تخرج، راسب، مرقن عائد.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>حالة الطالب مستمر</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtpass">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>397</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_21">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>206</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>رقم الطالب التسلسلي</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_22">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>430</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>العنوان</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtsno">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>205</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_23">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>107</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>سنة التسحيل صف2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_24">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>397</y>
+     <width>140</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>كلمة المرور</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtaddress">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>430</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhMultiLine</set>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtFullnames">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>73</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtemail">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>364</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txty2enrol">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>107</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_25">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>140</y>
+     <width>120</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>رقم هوية الطالب</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtnotes">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>204</y>
+     <width>170</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_26">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>338</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>تاريخ المباشرة</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_27">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>204</y>
+     <width>120</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>الملاحظات</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtSIDNo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>170</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_28">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>107</y>
+     <width>120</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>الدروس المستوفي</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_29">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>140</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>رقم الكتاب 2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_30">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>41</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;حالة الطالب هل هو مستمر، تخرج، راسب، مرقن عائد.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>رقم الامر الاداري</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtsatifiedsubj">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>107</y>
+     <width>170</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_31">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>305</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>المباشرة</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtrefrendom1">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>140</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtrefadded">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>41</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_32">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>272</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>التعليم الموازي</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_33">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>171</y>
+     <width>120</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>تاريخ اصدارها</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblname_34">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>173</y>
+     <width>145</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>مرقن عائد</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="txtdob">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>170</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="time">
+    <time>
+     <hour>18</hour>
+     <minute>0</minute>
+     <second>0</second>
+    </time>
+   </property>
+   <property name="maximumDateTime">
+    <datetime>
+     <hour>8</hour>
+     <minute>59</minute>
+     <second>59</second>
+     <year>9999</year>
+     <month>12</month>
+     <day>31</day>
+    </datetime>
+   </property>
+   <property name="maximumTime">
+    <time>
+     <hour>8</hour>
+     <minute>59</minute>
+     <second>59</second>
+    </time>
+   </property>
+   <property name="minimumTime">
+    <time>
+     <hour>9</hour>
+     <minute>0</minute>
+     <second>0</second>
+    </time>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+   <property name="timeSpec">
+    <enum>Qt::LocalTime</enum>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="txtenroldate">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>338</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="txtIDdate">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>171</y>
+     <width>170</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="wrapping">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="specialValueText">
+    <string/>
+   </property>
+   <property name="time">
+    <time>
+     <hour>3</hour>
+     <minute>0</minute>
+     <second>0</second>
+    </time>
+   </property>
+   <property name="currentSection">
+    <enum>QDateTimeEdit::DaySection</enum>
+   </property>
+   <property name="displayFormat">
+    <string>dd/MM/yyyy</string>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+   <property name="timeSpec">
+    <enum>Qt::LocalTime</enum>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txtcmbxstge">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>239</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txtGender">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>139</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txtcmbBxstates">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>404</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="placeholderText">
+    <string extracomment="ماهي حالة الطالب"/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txtpara">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>272</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txtcmbxbloodtype">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>234</y>
+     <width>280</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txtenrollment">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>305</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txtcmbxcontinuity">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>371</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txtcmbxgraduation">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>8</y>
+     <width>170</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txtcmbxentership">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>74</y>
+     <width>170</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ptnshowhomepage">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>400</y>
+     <width>180</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(96, 191, 130);
+font: 14pt &quot;Calibri&quot;;</string>
+   </property>
+   <property name="text">
+    <string>الذهاب الصفحة الرئيسية</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txcmbxtReturn">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>173</y>
+     <width>200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnbrowse">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>280</y>
+     <width>350</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>Browse to upload student by CSV file</string>
+   </property>
+  </widget>
+  <zorder>label_titel</zorder>
+  <zorder>lblfname</zorder>
+  <zorder>txtname</zorder>
+  <zorder>lblname</zorder>
+  <zorder>txtsname</zorder>
+  <zorder>lblname_2</zorder>
+  <zorder>txtEnname</zorder>
+  <zorder>lblgender</zorder>
+  <zorder>lblname_en</zorder>
+  <zorder>lblmother</zorder>
+  <zorder>txtmothername</zorder>
+  <zorder>lblbirthdate</zorder>
+  <zorder>lblname_7</zorder>
+  <zorder>txtidno</zorder>
+  <zorder>lblbloodtype</zorder>
+  <zorder>lblname_9</zorder>
+  <zorder>lblname_10</zorder>
+  <zorder>txtphone</zorder>
+  <zorder>lblname_11</zorder>
+  <zorder>lblname_12</zorder>
+  <zorder>lblname_13</zorder>
+  <zorder>txtparantsphone</zorder>
+  <zorder>txtenrolyear</zorder>
+  <zorder>lblname_14</zorder>
+  <zorder>txtprepschool</zorder>
+  <zorder>lblname_15</zorder>
+  <zorder>txtgraduationyear</zorder>
+  <zorder>lblname_16</zorder>
+  <zorder>lblname_17</zorder>
+  <zorder>lblname_18</zorder>
+  <zorder>lblname_19</zorder>
+  <zorder>lblname_20</zorder>
+  <zorder>txtpass</zorder>
+  <zorder>lblname_21</zorder>
+  <zorder>lblname_22</zorder>
+  <zorder>txtsno</zorder>
+  <zorder>lblname_23</zorder>
+  <zorder>lblname_24</zorder>
+  <zorder>txtaddress</zorder>
+  <zorder>txtFullnames</zorder>
+  <zorder>txtemail</zorder>
+  <zorder>txty2enrol</zorder>
+  <zorder>lblname_25</zorder>
+  <zorder>txtnotes</zorder>
+  <zorder>lblname_26</zorder>
+  <zorder>lblname_27</zorder>
+  <zorder>txtSIDNo</zorder>
+  <zorder>lblname_28</zorder>
+  <zorder>lblname_29</zorder>
+  <zorder>lblname_30</zorder>
+  <zorder>txtsatifiedsubj</zorder>
+  <zorder>lblname_31</zorder>
+  <zorder>txtrefrendom1</zorder>
+  <zorder>txtrefadded</zorder>
+  <zorder>lblname_32</zorder>
+  <zorder>lblname_33</zorder>
+  <zorder>lblname_34</zorder>
+  <zorder>txtdob</zorder>
+  <zorder>txtenroldate</zorder>
+  <zorder>txtIDdate</zorder>
+  <zorder>txtcmbxstge</zorder>
+  <zorder>txtGender</zorder>
+  <zorder>txtcmbBxstates</zorder>
+  <zorder>txtpara</zorder>
+  <zorder>txtcmbxbloodtype</zorder>
+  <zorder>txtenrollment</zorder>
+  <zorder>txtcmbxcontinuity</zorder>
+  <zorder>txtcmbxgraduation</zorder>
+  <zorder>txtcmbxentership</zorder>
+  <zorder>ptnshowhomepage</zorder>
+  <zorder>txcmbxtReturn</zorder>
+  <zorder>ptn_savenewstudent</zorder>
+  <zorder>btnbrowse</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>txtname</tabstop>
+  <tabstop>txtsname</tabstop>
+  <tabstop>txtFullnames</tabstop>
+  <tabstop>txtEnname</tabstop>
+  <tabstop>txtGender</tabstop>
+  <tabstop>txtdob</tabstop>
+  <tabstop>txtmothername</tabstop>
+  <tabstop>txtcmbxbloodtype</tabstop>
+  <tabstop>txtidno</tabstop>
+  <tabstop>txtphone</tabstop>
+  <tabstop>txtparantsphone</tabstop>
+  <tabstop>txtemail</tabstop>
+  <tabstop>txtpass</tabstop>
+  <tabstop>txtaddress</tabstop>
+  <tabstop>txtenrolyear</tabstop>
+  <tabstop>txtrefadded</tabstop>
+  <tabstop>txtprepschool</tabstop>
+  <tabstop>txty2enrol</tabstop>
+  <tabstop>txtrefrendom1</tabstop>
+  <tabstop>txcmbxtReturn</tabstop>
+  <tabstop>txtsno</tabstop>
+  <tabstop>txtcmbxstge</tabstop>
+  <tabstop>txtpara</tabstop>
+  <tabstop>txtenrollment</tabstop>
+  <tabstop>txtenroldate</tabstop>
+  <tabstop>txtcmbxcontinuity</tabstop>
+  <tabstop>txtcmbBxstates</tabstop>
+  <tabstop>txtcmbxgraduation</tabstop>
+  <tabstop>txtgraduationyear</tabstop>
+  <tabstop>txtcmbxentership</tabstop>
+  <tabstop>txtsatifiedsubj</tabstop>
+  <tabstop>txtSIDNo</tabstop>
+  <tabstop>txtIDdate</tabstop>
+  <tabstop>txtnotes</tabstop>
+  <tabstop>ptn_savenewstudent</tabstop>
+  <tabstop>ptnshowhomepage</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
