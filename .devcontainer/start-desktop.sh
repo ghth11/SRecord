@@ -20,5 +20,9 @@ if ! pgrep -f "websockify.*6080" >/dev/null; then
   nohup websockify --web=/usr/share/novnc/ 6080 localhost:5900 >/tmp/srecord-novnc.log 2>&1 &
 fi
 
-echo "Virtual desktop ready on forwarded port 6080."
-echo "Run: bash .devcontainer/run-srecord.sh"
+if [ -x ./SRecord ] && ! pgrep -x SRecord >/dev/null; then
+  nohup env DISPLAY=:1 ./SRecord >/tmp/srecord-app.log 2>&1 &
+fi
+
+echo "SRecord browser desktop is available on forwarded port 6080."
+echo "If the app is not visible, run: bash .devcontainer/run-srecord.sh"
