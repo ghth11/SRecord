@@ -1,7 +1,7 @@
 #ifndef ADDSTUDENT_H
 #define ADDSTUDENT_H
 
-#include <qsqlquerymodel>
+#include <QSqlQueryModel>
 #include <QDialog>
 
 namespace Ui {
