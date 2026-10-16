@@ -20,7 +20,7 @@ jobs:
       - name: Install Qt and SQLite driver
         run: |
           sudo apt-get update
-          sudo apt-get install -y qtbase5-dev qt5-qmake libqt5sql5-sqlite
+          sudo apt-get install -y qtbase5-dev qt5-qmake qttools5-dev-tools libqt5sql5-sqlite
 
       - name: Configure with qmake
         run: qmake SRecord.pro CONFIG+=release
