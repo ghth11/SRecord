@@ -2,6 +2,7 @@
 #include "ui_stdrecordshow.h"
 #include "srecord.h"
 #include "QSqlQueryModel"
+#include <QSqlQuery>
 #include <QtWidgets>
 
 showstudents::showstudents(QWidget *parent) :
