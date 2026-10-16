@@ -1,0 +1,22 @@
+{
+  "name": "SRecord Qt Development",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "SRecord Desktop (noVNC)",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "qmake SRecord.pro CONFIG+=debug && make -j2",
+  "postStartCommand": "bash .devcontainer/start-desktop.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools"
+      ]
+    }
+  }
+}
