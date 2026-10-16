@@ -1,6 +1,8 @@
 #include "studenteditdelete.h"
 #include "ui_studenteditdelete.h"
 #include "srecord.h"
+#include <QSqlQuery>
+#include <QDate>
 
 studenteditdelete::studenteditdelete(QWidget *parent) :
     QDialog(parent),
