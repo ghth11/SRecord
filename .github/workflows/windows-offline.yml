@@ -1,0 +1,73 @@
+name: Windows Offline Package
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  windows-package:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Enable MSVC build tools
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Install Qt 5
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: "5.15.2"
+          host: "windows"
+          target: "desktop"
+          arch: "win64_msvc2019_64"
+          cache: true
+
+      - name: Configure
+        shell: cmd
+        run: qmake SRecord.pro CONFIG+=release
+
+      - name: Build
+        shell: cmd
+        run: nmake
+
+      - name: Prepare portable application
+        shell: pwsh
+        run: |
+          $exe = Get-ChildItem -Path . -Recurse -Filter SRecord.exe | Select-Object -First 1
+          if (-not $exe) {
+            throw "SRecord.exe was not produced by the build."
+          }
+
+          New-Item -ItemType Directory -Force -Path dist\SRecord | Out-Null
+          Copy-Item $exe.FullName dist\SRecord\SRecord.exe
+          Copy-Item sinfo.db dist\SRecord\sinfo.db
+
+          windeployqt --release --compiler-runtime --no-translations dist\SRecord\SRecord.exe
+
+          @"
+          SRecord - Offline Desktop Package
+
+          1. Extract the whole SRecord folder to a writable location.
+          2. Keep sinfo.db beside SRecord.exe.
+          3. Run SRecord.exe.
+          4. Back up sinfo.db regularly because it contains the local records.
+
+          This package does not require an Internet connection for normal SQLite operation.
+          "@ | Set-Content -Encoding UTF8 dist\SRecord\README-OFFLINE.txt
+
+          Compress-Archive -Path dist\SRecord\* -DestinationPath dist\SRecord-Windows-Offline.zip -Force
+
+      - name: Upload portable ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: SRecord-Windows-Offline
+          path: dist/SRecord-Windows-Offline.zip
+          if-no-files-found: error
